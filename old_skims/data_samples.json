@@ -1,0 +1,68 @@
+{
+    "2018": {
+        "SKIM_EGamma_Run2018A": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EGamma_Run2018A",
+            "Sum_w": 1.0
+        },
+        "SKIM_EGamma_Run2018B": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EGamma_Run2018B",
+            "Sum_w": 1.0
+        },
+        "SKIM_EGamma_Run2018C": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EGamma_Run2018C",
+            "Sum_w": 1.0
+        },
+        "SKIM_EGamma_Run2018D": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EGamma_Run2018D",
+            "Sum_w": 1.0
+        },
+        "SKIM_MET_Run2018A": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_MET_Run2018A",
+            "Sum_w": 1.0
+        },
+        "SKIM_MET_Run2018B": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_MET_Run2018B",
+            "Sum_w": 1.0
+        },
+        "SKIM_MET_Run2018C": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_MET_Run2018C",
+            "Sum_w": 1.0
+        },
+        "SKIM_MET_Run2018D": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_MET_Run2018D",
+            "Sum_w": 1.0
+        },
+        "SKIM_SingleMuon_Run2018A": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_SingleMuon_Run2018A",
+            "Sum_w": 1.0
+        },
+        "SKIM_SingleMuon_Run2018B": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_SingleMuon_Run2018B",
+            "Sum_w": 1.0
+        },
+        "SKIM_SingleMuon_Run2018C": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_SingleMuon_Run2018C",
+            "Sum_w": 1.0
+        },
+        "SKIM_SingleMuon_Run2018D": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_SingleMuon_Run2018D",
+            "Sum_w": 1.0
+        },
+        "SKIM_Tau_Run2018A": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_Tau_Run2018A",
+            "Sum_w": 1.0
+        },
+        "SKIM_Tau_Run2018B": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_Tau_Run2018B",
+            "Sum_w": 1.0
+        },
+        "SKIM_Tau_Run2018C": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_Tau_Run2018C",
+            "Sum_w": 1.0
+        },
+        "SKIM_Tau_Run2018D": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_Tau_Run2018D",
+            "Sum_w": 1.0
+        }
+    }
+}

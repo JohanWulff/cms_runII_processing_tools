@@ -1,0 +1,867 @@
+{
+    "SKIM_DY_NLO": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_DY_NLO",
+        "year": 2018,
+        "sample_id": 3
+    },
+    "SKIM_EGamma_Run2018A": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EGamma_Run2018A",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_EGamma_Run2018B": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EGamma_Run2018B",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_EGamma_Run2018C": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EGamma_Run2018C",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_EGamma_Run2018D": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EGamma_Run2018D",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_EWKWMinus2Jets_WToLNu": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EWKWMinus2Jets_WToLNu",
+        "year": 2018,
+        "sample_id": 9
+    },
+    "SKIM_EWKWPlus2Jets_WToLNu": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EWKWPlus2Jets_WToLNu",
+        "year": 2018,
+        "sample_id": 9
+    },
+    "SKIM_EWKZ2Jets_ZToLL": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_EWKZ2Jets_ZToLL",
+        "year": 2018,
+        "sample_id": 9
+    },
+    "SKIM_ggF_BulkGraviton_m250": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m250",
+        "year": 2018,
+        "res_mass": 250,
+        "sample_id": -16
+    },
+    "SKIM_ggF_BulkGraviton_m260": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m260",
+        "year": 2018,
+        "res_mass": 260,
+        "sample_id": -16
+    },
+    "SKIM_ggF_BulkGraviton_m270": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m270",
+        "year": 2018,
+        "res_mass": 270,
+        "sample_id": -16
+    },
+    "SKIM_ggF_BulkGraviton_m280": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m280",
+        "year": 2018,
+        "res_mass": 280,
+        "sample_id": -16
+    },
+    "SKIM_ggF_BulkGraviton_m300": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m300",
+        "year": 2018,
+        "res_mass": 300,
+        "sample_id": -16
+    },
+    "SKIM_ggF_BulkGraviton_m320": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m320",
+        "year": 2018,
+        "res_mass": 320,
+        "sample_id": -16
+    },
+    "SKIM_ggF_BulkGraviton_m350": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m350",
+        "year": 2018,
+        "res_mass": 350,
+        "sample_id": -16
+    },
+    "SKIM_ggF_BulkGraviton_m400": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m400",
+        "year": 2018,
+        "res_mass": 400,
+        "sample_id": -16
+    },
+    "SKIM_ggF_BulkGraviton_m450": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m450",
+        "year": 2018,
+        "res_mass": 450,
+        "sample_id": -17
+    },
+    "SKIM_ggF_BulkGraviton_m500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m500",
+        "year": 2018,
+        "res_mass": 500,
+        "sample_id": -17
+    },
+    "SKIM_ggF_BulkGraviton_m550": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m550",
+        "year": 2018,
+        "res_mass": 550,
+        "sample_id": -17
+    },
+    "SKIM_ggF_BulkGraviton_m600": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m600",
+        "year": 2018,
+        "res_mass": 600,
+        "sample_id": -17
+    },
+    "SKIM_ggF_BulkGraviton_m650": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m650",
+        "year": 2018,
+        "res_mass": 650,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m700": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m700",
+        "year": 2018,
+        "res_mass": 700,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m750": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m750",
+        "year": 2018,
+        "res_mass": 750,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m800": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m800",
+        "year": 2018,
+        "res_mass": 800,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m850": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m850",
+        "year": 2018,
+        "res_mass": 850,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m900": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m900",
+        "year": 2018,
+        "res_mass": 900,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m1000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m1000",
+        "year": 2018,
+        "res_mass": 1000,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m1250": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m1250",
+        "year": 2018,
+        "res_mass": 1250,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m1500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m1500",
+        "year": 2018,
+        "res_mass": 1500,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m1750": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m1750",
+        "year": 2018,
+        "res_mass": 1750,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m2000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m2000",
+        "year": 2018,
+        "res_mass": 2000,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m2500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m2500",
+        "year": 2018,
+        "res_mass": 2500,
+        "sample_id": -18
+    },
+    "SKIM_ggF_BulkGraviton_m3000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_BulkGraviton_m3000",
+        "year": 2018,
+        "res_mass": 3000,
+        "sample_id": -18
+    },
+    "SKIM_ggF_Radion_m250": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m250",
+        "year": 2018,
+        "res_mass": 250,
+        "sample_id": -13
+    },
+    "SKIM_ggF_Radion_m260": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m260",
+        "year": 2018,
+        "res_mass": 260,
+        "sample_id": -13
+    },
+    "SKIM_ggF_Radion_m270": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m270",
+        "year": 2018,
+        "res_mass": 270,
+        "sample_id": -13
+    },
+    "SKIM_ggF_Radion_m280": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m280",
+        "year": 2018,
+        "res_mass": 280,
+        "sample_id": -13
+    },
+    "SKIM_ggF_Radion_m300": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m300",
+        "year": 2018,
+        "res_mass": 300,
+        "sample_id": -13
+    },
+    "SKIM_ggF_Radion_m320": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m320",
+        "year": 2018,
+        "res_mass": 320,
+        "sample_id": -13
+    },
+    "SKIM_ggF_Radion_m350": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m350",
+        "year": 2018,
+        "res_mass": 350,
+        "sample_id": -13
+    },
+    "SKIM_ggF_Radion_m400": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m400",
+        "year": 2018,
+        "res_mass": 400,
+        "sample_id": -13
+    },
+    "SKIM_ggF_Radion_m450": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m450",
+        "year": 2018,
+        "res_mass": 450,
+        "sample_id": -14
+    },
+    "SKIM_ggF_Radion_m500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m500",
+        "year": 2018,
+        "res_mass": 500,
+        "sample_id": -14
+    },
+    "SKIM_ggF_Radion_m550": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m550",
+        "year": 2018,
+        "res_mass": 550,
+        "sample_id": -14
+    },
+    "SKIM_ggF_Radion_m600": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m600",
+        "year": 2018,
+        "res_mass": 600,
+        "sample_id": -14
+    },
+    "SKIM_ggF_Radion_m650": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m650",
+        "year": 2018,
+        "res_mass": 650,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m700": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m700",
+        "year": 2018,
+        "res_mass": 700,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m750": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m750",
+        "year": 2018,
+        "res_mass": 750,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m800": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m800",
+        "year": 2018,
+        "res_mass": 800,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m850": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m850",
+        "year": 2018,
+        "res_mass": 850,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m900": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m900",
+        "year": 2018,
+        "res_mass": 900,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m1000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m1000",
+        "year": 2018,
+        "res_mass": 1000,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m1250": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m1250",
+        "year": 2018,
+        "res_mass": 1250,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m1500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m1500",
+        "year": 2018,
+        "res_mass": 1500,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m1750": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m1750",
+        "year": 2018,
+        "res_mass": 1750,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m2000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m2000",
+        "year": 2018,
+        "res_mass": 2000,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m2500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m2500",
+        "year": 2018,
+        "res_mass": 2500,
+        "sample_id": -15
+    },
+    "SKIM_ggF_Radion_m3000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggF_Radion_m3000",
+        "year": 2018,
+        "res_mass": 3000,
+        "sample_id": -15
+    },
+    "SKIM_ggHTauTau": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ggHTauTau",
+        "year": 2018,
+        "sample_id": 5
+    },
+    "SKIM_MET_Run2018A": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_MET_Run2018A",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_MET_Run2018B": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_MET_Run2018B",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_MET_Run2018C": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_MET_Run2018C",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_MET_Run2018D": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_MET_Run2018D",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_SingleMuon_Run2018A": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_SingleMuon_Run2018A",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_SingleMuon_Run2018B": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_SingleMuon_Run2018B",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_SingleMuon_Run2018C": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_SingleMuon_Run2018C",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_SingleMuon_Run2018D": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_SingleMuon_Run2018D",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_ST_tchannel_antitop": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ST_tchannel_antitop",
+        "year": 2018,
+        "sample_id": 14
+    },
+    "SKIM_ST_tchannel_top": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ST_tchannel_top",
+        "year": 2018,
+        "sample_id": 14
+    },
+    "SKIM_ST_tW_antitop": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ST_tW_antitop",
+        "year": 2018,
+        "sample_id": 14
+    },
+    "SKIM_ST_tW_top": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ST_tW_top",
+        "year": 2018,
+        "sample_id": 14
+    },
+    "SKIM_Tau_Run2018A": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_Tau_Run2018A",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_Tau_Run2018B": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_Tau_Run2018B",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_Tau_Run2018C": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_Tau_Run2018C",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_Tau_Run2018D": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_Tau_Run2018D",
+        "year": 2018,
+        "sample_id": 0
+    },
+    "SKIM_TT_fullyHad": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TT_fullyHad",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_TT_fullyLep": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TT_fullyLep",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_ttHToBB": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ttHToBB",
+        "year": 2018,
+        "sample_id": 2
+    },
+    "SKIM_ttHToNonBB": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ttHToNonBB",
+        "year": 2018,
+        "sample_id": 2
+    },
+    "SKIM_ttHToTauTau": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ttHToTauTau",
+        "year": 2018,
+        "sample_id": 2
+    },
+    "SKIM_TT_semiLep": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TT_semiLep",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_TTWJetsToLNu": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TTWJetsToLNu",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_TTWJetsToQQ": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TTWJetsToQQ",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_TTWW": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TTWW",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_TTWZ": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TTWZ",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_TTZToLLNuNu": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TTZToLLNuNu",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_TTZZ": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_TTZZ",
+        "year": 2018,
+        "sample_id": 1
+    },
+    "SKIM_VBF_BulkGraviton_m250": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m250",
+        "year": 2018,
+        "res_mass": 250,
+        "sample_id": -22
+    },
+    "SKIM_VBF_BulkGraviton_m260": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m260",
+        "year": 2018,
+        "res_mass": 260,
+        "sample_id": -22
+    },
+    "SKIM_VBF_BulkGraviton_m270": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m270",
+        "year": 2018,
+        "res_mass": 270,
+        "sample_id": -22
+    },
+    "SKIM_VBF_BulkGraviton_m280": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m280",
+        "year": 2018,
+        "res_mass": 280,
+        "sample_id": -22
+    },
+    "SKIM_VBF_BulkGraviton_m300": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m300",
+        "year": 2018,
+        "res_mass": 300,
+        "sample_id": -22
+    },
+    "SKIM_VBF_BulkGraviton_m320": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m320",
+        "year": 2018,
+        "res_mass": 320,
+        "sample_id": -22
+    },
+    "SKIM_VBF_BulkGraviton_m350": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m350",
+        "year": 2018,
+        "res_mass": 350,
+        "sample_id": -22
+    },
+    "SKIM_VBF_BulkGraviton_m400": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m400",
+        "year": 2018,
+        "res_mass": 400,
+        "sample_id": -22
+    },
+    "SKIM_VBF_BulkGraviton_m450": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m450",
+        "year": 2018,
+        "res_mass": 450,
+        "sample_id": -23
+    },
+    "SKIM_VBF_BulkGraviton_m500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m500",
+        "year": 2018,
+        "res_mass": 500,
+        "sample_id": -23
+    },
+    "SKIM_VBF_BulkGraviton_m550": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m550",
+        "year": 2018,
+        "res_mass": 550,
+        "sample_id": -23
+    },
+    "SKIM_VBF_BulkGraviton_m600": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m600",
+        "year": 2018,
+        "res_mass": 600,
+        "sample_id": -23
+    },
+    "SKIM_VBF_BulkGraviton_m650": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m650",
+        "year": 2018,
+        "res_mass": 650,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m700": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m700",
+        "year": 2018,
+        "res_mass": 700,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m750": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m750",
+        "year": 2018,
+        "res_mass": 750,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m800": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m800",
+        "year": 2018,
+        "res_mass": 800,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m850": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m850",
+        "year": 2018,
+        "res_mass": 850,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m900": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m900",
+        "year": 2018,
+        "res_mass": 900,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m1000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m1000",
+        "year": 2018,
+        "res_mass": 1000,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m1250": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m1250",
+        "year": 2018,
+        "res_mass": 1250,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m1500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m1500",
+        "year": 2018,
+        "res_mass": 1500,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m1750": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m1750",
+        "year": 2018,
+        "res_mass": 1750,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m2000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m2000",
+        "year": 2018,
+        "res_mass": 2000,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m2500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m2500",
+        "year": 2018,
+        "res_mass": 2500,
+        "sample_id": -24
+    },
+    "SKIM_VBF_BulkGraviton_m3000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_BulkGraviton_m3000",
+        "year": 2018,
+        "res_mass": 3000,
+        "sample_id": -24
+    },
+    "SKIM_VBFHTauTau": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBFHTauTau",
+        "year": 2018,
+        "sample_id": 14
+    },
+    "SKIM_VBF_Radion_m250": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m250",
+        "year": 2018,
+        "res_mass": 250,
+        "sample_id": -25
+    },
+    "SKIM_VBF_Radion_m260": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m260",
+        "year": 2018,
+        "res_mass": 260,
+        "sample_id": -25
+    },
+    "SKIM_VBF_Radion_m270": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m270",
+        "year": 2018,
+        "res_mass": 270,
+        "sample_id": -25
+    },
+    "SKIM_VBF_Radion_m280": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m280",
+        "year": 2018,
+        "res_mass": 280,
+        "sample_id": -25
+    },
+    "SKIM_VBF_Radion_m300": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m300",
+        "year": 2018,
+        "res_mass": 300,
+        "sample_id": -25
+    },
+    "SKIM_VBF_Radion_m320": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m320",
+        "year": 2018,
+        "res_mass": 320,
+        "sample_id": -25
+    },
+    "SKIM_VBF_Radion_m350": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m350",
+        "year": 2018,
+        "res_mass": 350,
+        "sample_id": -25
+    },
+    "SKIM_VBF_Radion_m400": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m400",
+        "year": 2018,
+        "res_mass": 400,
+        "sample_id": -25
+    },
+    "SKIM_VBF_Radion_m450": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m450",
+        "year": 2018,
+        "res_mass": 450,
+        "sample_id": -26
+    },
+    "SKIM_VBF_Radion_m500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m500",
+        "year": 2018,
+        "res_mass": 500,
+        "sample_id": -26
+    },
+    "SKIM_VBF_Radion_m550": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m550",
+        "year": 2018,
+        "res_mass": 550,
+        "sample_id": -26
+    },
+    "SKIM_VBF_Radion_m600": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m600",
+        "year": 2018,
+        "res_mass": 600,
+        "sample_id": -26
+    },
+    "SKIM_VBF_Radion_m650": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m650",
+        "year": 2018,
+        "res_mass": 650,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m700": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m700",
+        "year": 2018,
+        "res_mass": 700,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m750": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m750",
+        "year": 2018,
+        "res_mass": 750,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m800": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m800",
+        "year": 2018,
+        "res_mass": 800,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m850": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m850",
+        "year": 2018,
+        "res_mass": 850,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m900": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m900",
+        "year": 2018,
+        "res_mass": 900,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m1000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m1000",
+        "year": 2018,
+        "res_mass": 1000,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m1250": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m1250",
+        "year": 2018,
+        "res_mass": 1250,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m1500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m1500",
+        "year": 2018,
+        "res_mass": 1500,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m1750": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m1750",
+        "year": 2018,
+        "res_mass": 1750,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m2000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m2000",
+        "year": 2018,
+        "res_mass": 2000,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m2500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m2500",
+        "year": 2018,
+        "res_mass": 2500,
+        "sample_id": -27
+    },
+    "SKIM_VBF_Radion_m3000": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_VBF_Radion_m3000",
+        "year": 2018,
+        "res_mass": 3000,
+        "sample_id": -27
+    },
+    "SKIM_WJets_HT_0_70": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_0_70",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WJets_HT_100_200": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_100_200",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WJets_HT_1200_2500": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_1200_2500",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WJets_HT_200_400": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_200_400",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WJets_HT_2500_Inf": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_2500_Inf",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WJets_HT_400_600": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_400_600",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WJets_HT_600_800": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_600_800",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WJets_HT_70_100": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_70_100",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WJets_HT_800_1200": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WJets_HT_800_1200",
+        "year": 2018,
+        "sample_id": 4
+    },
+    "SKIM_WminusHTauTau": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WminusHTauTau",
+        "year": 2018,
+        "sample_id": 7
+    },
+    "SKIM_WplusHTauTau": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WplusHTauTau",
+        "year": 2018,
+        "sample_id": 8
+    },
+    "SKIM_WW": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WW",
+        "year": 2018,
+        "sample_id": 10
+    },
+    "SKIM_WZ": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_WZ",
+        "year": 2018,
+        "sample_id": 11
+    },
+    "SKIM_ZH_HTauTau": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ZH_HTauTau",
+        "year": 2018,
+        "sample_id": 12
+    },
+    "SKIM_ZZ": {
+        "path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL18_220610/SKIM_ZZ",
+        "year": 2018,
+        "sample_id": 13
+    }
+}

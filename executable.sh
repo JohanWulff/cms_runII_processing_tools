@@ -25,7 +25,7 @@ done
 CMSSW_SRC="/eos/user/j/jowulff/res_HH/giles_data_proc/CMSSW_10_2_15/src"
 EXE="/eos/user/j/jowulff/res_HH/giles_data_proc/CMSSW_10_2_15/bin/slc7_amd64_gcc700/RunLoop"
 cd $CMSSW_SRC || exit 1
-cmsenv
-echo "${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR -c $CHANNEL"
+cmsenv && cd - || exit 1
+echo "running: ${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR -c $CHANNEL"
 ${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR -c $CHANNEL || rm $OUTFILE
 exit 0

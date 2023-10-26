@@ -9,14 +9,10 @@ from datasamples import data_samples
 
 
 
-
 def make_parser():
-    parser = ArgumentParser(description="Submit processing of LLR \
-Samples")
+    parser = ArgumentParser(description="Submit processing of LLR Samples to DNN inputs")
     parser.add_argument("-s", "--submit_base", type=str, 
                         help="Base dir to submit from")
-    parser.add_argument("-o", "--output_dir" ,type=str,
-                        help="Dir to write output files to")
     parser.add_argument("-c", "--channel", type=str,
                         help="Channel. Can be either tauTau, muTau, or eTau.")
     parser.add_argument("-y", "--year", type=str, 
@@ -40,18 +36,50 @@ def checkmake_dir(path):
             raise ValueError(f"{path} does not exist")
 
 
-def return_subfile(base_dir, executable):
-    arguments = f"-i $(INFILES) -o $(OUTDIR) -e $(EXE) -s $(SAMPLE) \
---sum_w $(SUM_W) -y $(YEAR) -c $(CHANNEL)"
+def return_executable():
+    exec_str = ('#!/usr/bin/bash\n'
+    'usage() { echo "Usage: $0 [-i <input file> ] [-o <outfile>] [-s sample] [-w sum_w] [-y year] [-c channel]" 1>&2; exit 1; }\n'
+    'while getopts "i:o:s:w:y:c:" opt; do\n'
+    '    case "$opt" in\n'
+    '        i) INFILE=$OPTARG\n'
+    '            ;;\n'
+    '        o) OUTFILE=$OPTARG\n'
+    '            ;;\n'
+    '        s) SAMPLE=$OPTARG\n'
+    '            ;;\n'
+    '        w) SUM_W=$OPTARG\n'
+    '            ;;\n'
+    '        y) YEAR=$OPTARG\n'
+    '            ;;\n'
+    '        c) CHANNEL=$OPTARG\n'
+    '            ;;\n'
+    '        *)\n'
+    '            echo "Invalid argument $OPTARG";\n'
+    '            usage\n'
+    '            exit 1\n'
+    '    esac\n'
+    'done\n'
+    'CMSSW_SRC="/eos/user/j/jowulff/res_HH/giles_data_proc/CMSSW_10_2_15/src"\n'
+    'EXE="/eos/user/j/jowulff/res_HH/giles_data_proc/CMSSW_10_2_15/bin/slc7_amd64_gcc700/RunLoop"\n'
+    'cd $CMSSW_SRC || exit 1\n'
+    'cmsenv && cd - || exit 1\n'
+    'echo "running: ${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR -c $CHANNEL"\n'
+    '${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR -c $CHANNEL || rm $OUTFILE\n'
+    'exit 0\n')
+    return exec_str
+
+
+def return_subfile(executable, year, channel, sample):
+    arguments = f"-i $(INFILES) -o $(OUTFILE) -s $(SAMPLE) -w $(SUM_W) -y $(YEAR) -c $(CHANNEL)"
     file_str = f"executable={executable}\n\
-should_transfer_files = YES\n\
-when_to_transfer_output = ON_EXIT\n\
 \n\
-output                = {base_dir}/out/$(ClusterId).$(ProcId).out\n\
-error                 = {base_dir}/err/$(ClusterId).$(ProcId).err\n\
-log                   = {base_dir}/log/$(ClusterId).$(ProcId).log\n\
+output                = $(ClusterId).$(ProcId).out\n\
+error                 = $(ClusterId).$(ProcId).err\n\
+log                   = $(ClusterId).$(ProcId).log\n\
+output_destination    = root://eosuser.cern.ch//eos/user/j/jowulff/res_HH/Condor_out/dnn_data_{year}_{channel}/{sample}\n\
+MY.XRDCP_CREATE_DIR   = True\n\
 \n\
-+JobFlavour = \"longlunch\"\n\
+MY.JobFlavour = \"espresso\"\n\
 Arguments = {arguments}\n\
 queue"
     return file_str
@@ -75,18 +103,20 @@ def parse_goodfile_txt(goodfile:Path,):
     return [str(gfile) for gfile in gfiles]
 
 
-def main(submit_base_dir: str, outdir: str, channel: str, year: str, sample_json: str, broken_files: str=""):
-    executable = "/eos/user/j/jowulff/res_HH/giles_data_proc/\
-CMSSW_10_2_15/src/cms_runII_data_proc/highLevel/executable.py"
-    shellscript = "/eos/user/j/jowulff/res_HH/giles_data_proc/\
-CMSSW_10_2_15/src/cms_runII_data_proc/highLevel/executable.sh"
+def main(submit_base_dir: str, 
+         channel: str,
+         year: str,
+         sample_json: str,
+         broken_files: str=""):
+    #executable = "/eos/user/j/jowulff/res_HH/giles_data_proc/\
+#CMSSW_10_2_15/src/cms_runII_data_proc/highLevel/executable.py"
+    shellscript = "/eos/user/j/jowulff/res_HH/cms_runII_processing_tools/executable.sh"
     # check if it starts with /afs
     if not submit_base_dir.startswith("/afs"):
         raise ValueError("Submission must happen from /afs!")
     checkmake_dir(submit_base_dir)
-    checkmake_dir(outdir)
     # copy executables to /afs. Condor cannot access /eos at the time of writing
-    for script in [shellscript, executable]:
+    for script in [shellscript]:
         prcs = Popen(f"cp {script} {submit_base_dir}", 
                                 shell=True, stdin=PIPE, stdout=PIPE,
                                 encoding='utf-8')
@@ -95,7 +125,7 @@ CMSSW_10_2_15/src/cms_runII_data_proc/highLevel/executable.sh"
             print(err)
             raise ValueError(f"Unable to move {script} to {submit_base_dir}")
 
-    afs_exe = submit_base_dir+"/executable.py"
+    #afs_exe = submit_base_dir+"/executable.py"
     afs_shscript = submit_base_dir+"/executable.sh"
 
     with open(sample_json) as f:
@@ -116,14 +146,9 @@ files for sample ({i+1}/{len(d)})\r", end="")
                 continue
             else:
                 print(f"\nUsing Data skims: {sample}\n")
-        if not os.path.exists(outdir.rstrip("/")+f"/{sample}"):
-            os.mkdir(outdir.rstrip("/")+f"/{sample}")
         submit_dir = submit_base_dir.rstrip("/")+f"/{sample}"
         if not os.path.exists(submit_dir):
             os.mkdir(submit_dir)
-            os.mkdir(submit_dir+"/err")
-            os.mkdir(submit_dir+"/log")
-            os.mkdir(submit_dir+"/out")
         dagfile = submit_dir+f"/{sample}.dag"
         submitfile = submit_dir+f"/{sample}.submit"
         path = d[sample]["Path"]
@@ -141,17 +166,28 @@ files for sample ({i+1}/{len(d)})\r", end="")
         filechunks = [gfiles[i:i+100] for i in range(0, len(gfiles), 100)]
         if not os.path.exists(dagfile):
             with open(dagfile, "x") as dfile:
-                for chunk in filechunks:
-                    print(f"JOB {chunk[0]} {submitfile}", file=dfile)
-                    print(f'VARS {chunk[0]} INFILES="{" ".join(chunk)}" \
-    OUTDIR="{outdir.rstrip("/")+f"/{sample}"}" EXE="{afs_shscript}" SAMPLE="{sample}" \
-    SUM_W="{sum_w}" YEAR="{year}" CHANNEL="{channel}"', file=dfile)
-            submit_string = return_subfile(base_dir=submit_dir, 
-                                        executable=afs_exe)
+                #for chunk in filechunks:
+                    #print(f"JOB {chunk[0]} {submitfile}", file=dfile)
+                    #print(f'VARS {chunk[0]} INFILES="{" ".join(chunk)}" \
+    #OUTDIR="{outdir.rstrip("/")+f"/{sample}"}" EXE="{afs_shscript}" SAMPLE="{sample}" \
+    #SUM_W="{sum_w}" YEAR="{year}" CHANNEL="{channel}"', file=dfile)
+                for file in gfiles:
+                    print(f"JOB {file.split('/')[-1]} {submitfile}", file=dfile)
+                    print(f'VARS {file.split("/")[-1]} INFILES="{file}" \
+OUTFILE="{file.split("/")[-1]}" SAMPLE="{sample}" SUM_W="{sum_w}" \
+YEAR="{year}" CHANNEL="{channel}"', file=dfile)
+            submit_string = return_subfile(executable=afs_shscript,
+                                        year=year,
+                                        channel=channel,
+                                        sample=sample)
         else:
             print(f"\n {dagfile} already exists.. Not creating new one \n")
 
         if not os.path.exists(submitfile):
+            submit_string = return_subfile(executable=afs_shscript,
+                                        year=year,
+                                        channel=channel,
+                                        sample=sample)
             with open(submitfile, "x") as subfile:
                 print(submit_string, file=subfile)
         else:
@@ -161,7 +197,6 @@ if __name__ == "__main__":
     parser = make_parser()
     args = parser.parse_args()
     main(submit_base_dir=args.submit_base,
-         outdir=args.output_dir,
          channel=args.channel,
          year=args.year,
          sample_json=args.json,

@@ -21,19 +21,24 @@ def make_parser():
 
 def parse_goodfile_txt(goodfile:Path,):
     skims_dir = goodfile.absolute().parent
-    with open(goodfile) as gfile:
-        gfiles = sorted([Path(line.rstrip()) for line in gfile])
-        if len(gfiles) == 0:
-            print(f"Found 0 files in {goodfile}. Globbing all .root files in skim dir.")
-            # goodfiles.txt is empty: just glob all .root files in 
-            # skims dir and hope they're good
-            gfiles = sorted([i for i in skims_dir.glob("*.root")])
-        else:
-            # check if the paths have been updated
-            if gfiles[0].parent != skims_dir:
-                # if not stick the filename on the end of the provided path
-                # and hope for the best
-                gfiles = [skims_dir / i.name for i in gfiles]
+    try:
+        with open(goodfile) as gfile:
+            gfiles = sorted([Path(line.rstrip()) for line in gfile])
+            if len(gfiles) == 0:
+                print(f"Found 0 files in {goodfile}. Globbing all .root files in skim dir.")
+                # goodfiles.txt is empty: just glob all .root files in 
+                # skims dir and hope they're good
+                gfiles = sorted([i for i in skims_dir.glob("*.root")])
+            else:
+                # check if the paths have been updated
+                if gfiles[0].parent != skims_dir:
+                    # if not stick the filename on the end of the provided path
+                    # and hope for the best
+                    gfiles = [skims_dir / i.name for i in gfiles]
+    except:
+        print(f"Unable to read goodfiles from {gfile}. Globbing all .root files in skim dir.")
+        gfiles = sorted([i for i in skims_dir.glob("*.root")])
+
     return gfiles
 
 
@@ -42,6 +47,7 @@ def read_sumw(gfiles:list,):
     sum_w = 0
     for j, gfile in enumerate(gfiles):
         print(f"Opening file {j+1}/{len(gfiles)}.\r", end="")
+        print(f"Opening file {gfile}.\r", end="")
         sample = gfile.absolute().parent.name
         try:
             with uproot.open(gfile) as data:
@@ -59,6 +65,12 @@ def read_sumw(gfiles:list,):
             print(f"{gfile} seems to be broken")
             broken_dict[sample]["Broken"].append(str(gfile))
             continue
+        except uproot.KeyInFileError as upe:
+            print(upe)
+            print(f"{gfile} seems to be broken")
+            broken_dict[sample]["Empty"].append(str(gfile))
+        except:
+            print("{gfile} seems to be broken")
     return sum_w
     
 
@@ -72,6 +84,7 @@ def main(paths: list, year: str, jsonfile:str = ""):
     #paths = [i for i in paths if not f"Run{year}" in i]
     for i, path in enumerate(paths):
         print(f"\nWorking on sample {i+1}/{len(paths)}.\n")
+        print(f"\nWorking on sample {path}.\n")
         path = Path(path).absolute()
         sample = path.stem
         goodfile = path / 'goodfiles.txt'
@@ -84,7 +97,10 @@ def main(paths: list, year: str, jsonfile:str = ""):
             # assumed there would always be a "goodfiles.txt".. So here we are.
             gfiles = sorted([i for i in path.glob("*.root")])
         else:
-            gfiles = parse_goodfile_txt(goodfile) 
+            try:
+                gfiles = parse_goodfile_txt(goodfile) 
+            except:
+                print(f"Unable to read {goodfile}")
         n_files = len(gfiles) 
         if year in path.name:
             # Data sample
@@ -92,10 +108,14 @@ def main(paths: list, year: str, jsonfile:str = ""):
             d[year][sample]["Sum_w"] = 1
             d[year][sample]["N_files"] = n_files
         else:
-            sum_w = read_sumw(gfiles,)
-            d[year][sample]["Path"] = str(path)
-            d[year][sample]["Sum_w"] = sum_w
-            d[year][sample]["N_files"] = n_files
+            try:
+                sum_w = read_sumw(gfiles,)
+                d[year][sample]["Path"] = str(path)
+                d[year][sample]["Sum_w"] = sum_w
+                d[year][sample]["N_files"] = n_files
+            except:
+                print(f"Unable to read weights for sample {sample}")
+                continue
     with open(f"./{jsonfile}", "a") as f:
         print(f"writing to ./{jsonfile}. You may want to change the name.")
         json.dump(d, f)

@@ -1,52 +1,82 @@
 {
     "2017": {
+        "SKIM_DoubleMuon_Run2017B": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DoubleMuon_Run2017B",
+            "Sum_w": 1,
+            "N_files": 45
+        },
+        "SKIM_DoubleMuon_Run2017C": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DoubleMuon_Run2017C",
+            "Sum_w": 1,
+            "N_files": 52
+        },
+        "SKIM_DoubleMuon_Run2017D": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DoubleMuon_Run2017D",
+            "Sum_w": 1,
+            "N_files": 56
+        },
+        "SKIM_DoubleMuon_Run2017E": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DoubleMuon_Run2017E",
+            "Sum_w": 1,
+            "N_files": 51
+        },
+        "SKIM_DoubleMuon_Run2017F": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DoubleMuon_Run2017F",
+            "Sum_w": 1,
+            "N_files": 51
+        },
         "SKIM_DY_amc_0j": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_0j",
-            "Sum_w": 1394480536.96875,
+            "Sum_w": 1394484280.265625,
             "N_files": 335
         },
         "SKIM_DY_amc_1j": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_1j",
-            "Sum_w": 1177234863.125,
+            "Sum_w": 1177234690.125,
             "N_files": 266
         },
         "SKIM_DY_amc_2j": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_2j",
-            "Sum_w": 365879200.0,
+            "Sum_w": 365878951.1875,
             "N_files": 292
         },
         "SKIM_DY_amc_incl": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_incl",
-            "Sum_w": 10159701360.0,
+            "Sum_w": 10159716710.0,
             "N_files": 297
+        },
+        "SKIM_DY_amc_LM": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_LM",
+            "Sum_w": 9863188493.625,
+            "N_files": 324
         },
         "SKIM_DY_amc_PtZ_0To50": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_0To50",
-            "Sum_w": 7473349724.5,
+            "Sum_w": 7473318169.5,
             "N_files": 302
         },
         "SKIM_DY_amc_PtZ_100To250": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_100To250",
-            "Sum_w": 147840034.41796875,
+            "Sum_w": 147839948.57617188,
             "N_files": 299
         },
-        "SKIM_DY_amc_PtZ_250to400": {
-            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_250to400",
-            "Sum_w": 1130153.080001831,
+        "SKIM_DY_amc_PtZ_250To400": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_250To400",
+            "Sum_w": 1130151.4586334229,
             "N_files": 356
         },
-        "SKIM_DY_amc_PtZ_400to650": {
-            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_400to650",
+        "SKIM_DY_amc_PtZ_400To650": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_400To650",
             "Sum_w": 21028.15368461609,
             "N_files": 141
         },
         "SKIM_DY_amc_PtZ_50To100": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_50To100",
-            "Sum_w": 1759256227.6875,
+            "Sum_w": 1759257478.5,
             "N_files": 292
         },
-        "SKIM_DY_amc_PtZ_650toInf": {
-            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_650toInf",
+        "SKIM_DY_amc_PtZ_650ToInf": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_DY_amc_PtZ_650ToInf",
             "Sum_w": 2018.8377103209496,
             "N_files": 192
         },
@@ -327,8 +357,8 @@
         },
         "SKIM_ggF_Radion_m800": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ggF_Radion_m800",
-            "Sum_w": 566.1422452926636,
-            "N_files": 9
+            "Sum_w": 608.7176923751831,
+            "N_files": 10
         },
         "SKIM_ggF_Radion_m850": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ggF_Radion_m850",
@@ -347,7 +377,7 @@
         },
         "SKIM_GluGluHToTauTau": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_GluGluHToTauTau",
-            "Sum_w": 847455.3178710938,
+            "Sum_w": 847478.8764648438,
             "N_files": 29
         },
         "SKIM_MET_Run2017B": {
@@ -388,12 +418,12 @@
         "SKIM_SingleMuon_Run2017D": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_SingleMuon_Run2017D",
             "Sum_w": 1,
-            "N_files": 50
+            "N_files": 52
         },
         "SKIM_SingleMuon_Run2017E": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_SingleMuon_Run2017E",
             "Sum_w": 1,
-            "N_files": 50
+            "N_files": 51
         },
         "SKIM_SingleMuon_Run2017F": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_SingleMuon_Run2017F",
@@ -402,22 +432,22 @@
         },
         "SKIM_ST_tchannel_antitop": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ST_tchannel_antitop",
-            "Sum_w": 13609078.1953125,
+            "Sum_w": 13609054.9609375,
             "N_files": 78
         },
         "SKIM_ST_tchannel_top": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ST_tchannel_top",
-            "Sum_w": 42194345.875,
+            "Sum_w": 42193856.0625,
             "N_files": 81
         },
         "SKIM_ST_tW_antitop": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ST_tW_antitop",
-            "Sum_w": 561312.3142089844,
+            "Sum_w": 561311.6876220703,
             "N_files": 63
         },
         "SKIM_ST_tW_top": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ST_tW_top",
-            "Sum_w": 557771.6037597656,
+            "Sum_w": 557769.5349121094,
             "N_files": 63
         },
         "SKIM_Tau_Run2017B": {
@@ -447,37 +477,42 @@
         },
         "SKIM_TT_fullyHad": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_TT_fullyHad",
-            "Sum_w": 226757090.875,
+            "Sum_w": 226085886.625,
             "N_files": 99
         },
         "SKIM_TT_fullyLep": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_TT_fullyLep",
-            "Sum_w": 23435585.30859375,
-            "N_files": 272
+            "Sum_w": 23433833.921875,
+            "N_files": 97
         },
         "SKIM_ttHTobb": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ttHTobb",
-            "Sum_w": 11935.930885314941,
+            "Sum_w": 11935.819938659668,
             "N_files": 29
         },
         "SKIM_ttHToNonbb": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ttHToNonbb",
-            "Sum_w": 6578.811180114746,
-            "N_files": 30
+            "Sum_w": 6579.587723970413,
+            "N_files": 119
         },
         "SKIM_ttHToTauTau": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ttHToTauTau",
-            "Sum_w": 34766.2405090332,
+            "Sum_w": 34899.94209289551,
             "N_files": 32
         },
         "SKIM_TT_semiLep": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_TT_semiLep",
-            "Sum_w": 325168723.78125,
-            "N_files": 291
+            "Sum_w": 329090947.5,
+            "N_files": 99
+        },
+        "SKIM_TTWH": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_TTWH",
+            "Sum_w": 1095.5828313827515,
+            "N_files": 16
         },
         "SKIM_TTWJetsToLNu": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_TTWJetsToLNu",
-            "Sum_w": 7611.028884887695,
+            "Sum_w": 7611.029083251953,
             "N_files": 20
         },
         "SKIM_TTWJetsToQQ": {
@@ -495,9 +530,19 @@
             "Sum_w": 1065.4886326789856,
             "N_files": 8
         },
+        "SKIM_TTZH": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_TTZH",
+            "Sum_w": 1065.1451125144958,
+            "N_files": 22
+        },
         "SKIM_TTZToLLNuNu": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_TTZToLLNuNu",
-            "Sum_w": 10539.613994598389,
+            "Sum_w": 10539.528926849365,
+            "N_files": 21
+        },
+        "SKIM_TTZToQQ": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_TTZToQQ",
+            "Sum_w": 90625.36862182617,
             "N_files": 21
         },
         "SKIM_TTZZ": {
@@ -632,7 +677,7 @@
         },
         "SKIM_VBFHToTauTau": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_VBFHToTauTau",
-            "Sum_w": 33779.142150878906,
+            "Sum_w": 33778.83917236328,
             "N_files": 33
         },
         "SKIM_VBF_Radion_m1000": {
@@ -722,8 +767,8 @@
         },
         "SKIM_VBF_Radion_m550": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_VBF_Radion_m550",
-            "Sum_w": 602.5057373046875,
-            "N_files": 16
+            "Sum_w": 608.5759029388428,
+            "N_files": 17
         },
         "SKIM_VBF_Radion_m600": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_VBF_Radion_m600",
@@ -762,67 +807,67 @@
         },
         "SKIM_WJets_HT0To70": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT0To70",
-            "Sum_w": 2983621.140625,
+            "Sum_w": 2969383.0703125,
             "N_files": 20
         },
         "SKIM_WJets_HT100To200": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT100To200",
-            "Sum_w": 143351.39501953125,
+            "Sum_w": 143350.8427734375,
             "N_files": 20
         },
         "SKIM_WJets_HT1200To2500": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT1200To2500",
-            "Sum_w": 15082.748474121094,
+            "Sum_w": 15083.18977355957,
             "N_files": 21
         },
         "SKIM_WJets_HT200To400": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT200To400",
-            "Sum_w": 128858.84265136719,
+            "Sum_w": 128859.36901855469,
             "N_files": 21
         },
         "SKIM_WJets_HT2500ToInf": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT2500ToInf",
-            "Sum_w": 3609.3285598754883,
+            "Sum_w": 3609.2805709838867,
             "N_files": 18
         },
         "SKIM_WJets_HT400To600": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT400To600",
-            "Sum_w": 16642.707595825195,
+            "Sum_w": 16642.512382507324,
             "N_files": 19
         },
         "SKIM_WJets_HT600To800": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT600To800",
-            "Sum_w": 16876.459014892578,
+            "Sum_w": 16876.334747314453,
             "N_files": 19
         },
         "SKIM_WJets_HT70To100": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT70To100",
-            "Sum_w": 135260.69970703125,
+            "Sum_w": 135260.2294921875,
             "N_files": 20
         },
         "SKIM_WJets_HT800To1200": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WJets_HT800To1200",
-            "Sum_w": 15486.080291748047,
+            "Sum_w": 15486.292518615723,
             "N_files": 20
         },
         "SKIM_WminusHToTauTau": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WminusHToTauTau",
-            "Sum_w": 6310.360901832581,
+            "Sum_w": 6310.3929624557495,
             "N_files": 34
         },
         "SKIM_WplusHToTauTau": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WplusHToTauTau",
-            "Sum_w": 10521.924995422363,
+            "Sum_w": 10521.92021369934,
             "N_files": 30
         },
         "SKIM_WW": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WW",
-            "Sum_w": 47519.166259765625,
+            "Sum_w": 47519.32238769531,
             "N_files": 20
         },
         "SKIM_WWW": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WWW",
-            "Sum_w": 6468.183197021484,
+            "Sum_w": 6468.114730834961,
             "N_files": 20
         },
         "SKIM_WWZ": {
@@ -832,27 +877,37 @@
         },
         "SKIM_WZ": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WZ",
-            "Sum_w": 24007.062101364136,
+            "Sum_w": 24007.15530204773,
             "N_files": 22
         },
         "SKIM_WZZ": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_WZZ",
-            "Sum_w": 1722.715274810791,
+            "Sum_w": 1722.7009201049805,
             "N_files": 21
+        },
+        "SKIM_ZH_HToBB_ZToLL": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ZH_HToBB_ZToLL",
+            "Sum_w": 1154.6012482643127,
+            "N_files": 31
+        },
+        "SKIM_ZH_HToBB_ZToQQ": {
+            "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ZH_HToBB_ZToQQ",
+            "Sum_w": 17082.575622558594,
+            "N_files": 31
         },
         "SKIM_ZHToTauTau": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ZHToTauTau",
-            "Sum_w": 11914.257537841797,
+            "Sum_w": 11914.26968383789,
             "N_files": 29
         },
         "SKIM_ZZ": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ZZ",
-            "Sum_w": 8238.162139892578,
+            "Sum_w": 8238.159759521484,
             "N_files": 17
         },
         "SKIM_ZZZ": {
             "Path": "/eos/user/l/lportale/hhbbtautau/skims/SKIMS_UL17/SKIM_ZZZ",
-            "Sum_w": 428.1288118362427,
+            "Sum_w": 428.12482595443726,
             "N_files": 21
         }
     }

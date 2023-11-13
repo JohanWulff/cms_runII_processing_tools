@@ -2,11 +2,89 @@ import uproot
 from glob import glob
 from argparse import ArgumentParser
 import os
+import re
 import json
 from collections import defaultdict
 from pathlib2 import Path
 
 broken_dict = defaultdict(lambda: defaultdict(list))
+
+
+sample_2id = {
+    "radion_ggf": -4,
+    "radion_vbf": -3,
+    "graviton_ggf": -2,
+    "graviton_vbf": -1,
+    "data": 0,
+    "DY": 1,
+    "TT" : 2,
+    "ST" : 3,
+    "WJets" : 4,
+    "EWK" : 5,
+    "TTV" : 6,
+    "TTVV" : 7,
+    "TTVH" : 8,
+    "TTH" : 9,
+    "SMH" : 10,
+    "SMHH" : 11,
+    "WH" : 12,
+    "ZH" : 13,
+    "VVV" : 14,
+    "VV" : 15,
+}
+
+
+def get_sample_id(skim: str):
+    if any(y in skim for y in ['2016', '2017', '2018']):
+        # data skims
+        return 0
+    elif "radion" in skim.lower():
+        if "vbf" in skim.lower():
+            return -4 
+        elif "ggf" in skim.lower():
+            return -3 
+        else:
+            raise ValueError(f"Radion (signal) skim found but neither vbf nor ggf in {skim}")
+    elif "graviton" in skim.lower():
+        if "vbf" in skim.lower():
+            return -2 
+        elif "ggf" in skim.lower():
+            return -1 
+        else:
+            raise ValueError(f"Graviton (signal) skim found but neither vbf nor ggf in {skim}")
+    else:
+        if "DY_" in skim:
+            return 1
+        elif "TT_" in skim:
+            return 2
+        elif "ST_" in skim:
+            return 3
+        elif "WJets_" in skim:
+            return 4
+        elif "EWK" in skim:
+            return 5
+        elif any(s in skim for s in ["TTZTo", "TTWJets"]):
+            return 6
+        elif any(s in skim for s in ["TTWW", 'TTWZ', 'TTZZ']):
+            return 7
+        elif any(s in skim for s in ["TTZH", "TTWH"]):
+            return 8
+        elif "ttHTo" in skim:
+            return 9
+        elif any(s in skim for s in ["VBFHTo","GluGluHTo"]):
+            return 10
+        elif "GGHH_SM" in skim:
+            return 11
+        elif any(s in skim for s in ["WminusHTo","WplusHTo"]):
+            return 12
+        elif any(s in skim for s in ["ZH_HTo","ZHTo"]):
+            return 13
+        elif any(s in skim for s in ["WWW","WWZ","WZZ","ZZZ"]):
+            return 14
+        elif any(s in skim for s in ["WW", "WZ", "ZZ"]):
+            return 15
+        else:
+            raise ValueError(f"Cannot associate skim {skim} with an ID")
 
 
 def make_parser():
@@ -86,7 +164,8 @@ def main(paths: list, year: str, jsonfile:str = ""):
         print(f"\nWorking on sample {i+1}/{len(paths)}.\n")
         print(f"\nWorking on sample {path}.\n")
         path = Path(path).absolute()
-        sample = path.stem
+        skim = path.stem
+        sample_id = get_sample_id(skim)
         goodfile = path / 'goodfiles.txt'
         if not os.path.exists(goodfile):
             print(f"{path} does not have a goodfile.txt")
@@ -104,17 +183,19 @@ def main(paths: list, year: str, jsonfile:str = ""):
         n_files = len(gfiles) 
         if year in path.name:
             # Data sample
-            d[year][sample]["Path"] = str(path)
-            d[year][sample]["Sum_w"] = 1
-            d[year][sample]["N_files"] = n_files
+            d[year][skim]["Path"] = str(path)
+            d[year][skim]["Sum_w"] = 1
+            d[year][skim]["N_files"] = n_files
+            d[year][skim]["Sample_ID"] = sample_id
         else:
             try:
                 sum_w = read_sumw(gfiles,)
-                d[year][sample]["Path"] = str(path)
-                d[year][sample]["Sum_w"] = sum_w
-                d[year][sample]["N_files"] = n_files
+                d[year][skim]["Path"] = str(path)
+                d[year][skim]["Sum_w"] = sum_w
+                d[year][skim]["N_files"] = n_files
+                d[year][skim]["Sample_ID"] = sample_id
             except:
-                print(f"Unable to read weights for sample {sample}")
+                print(f"Unable to read weights for skim {skim}")
                 continue
     with open(f"./{jsonfile}", "a") as f:
         print(f"writing to ./{jsonfile}. You may want to change the name.")

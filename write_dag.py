@@ -13,8 +13,6 @@ def make_parser():
     parser = ArgumentParser(description="Submit processing of LLR Samples to DNN inputs")
     parser.add_argument("-s", "--submit_base", type=str, 
                         help="Base dir to submit from")
-    parser.add_argument("-c", "--channel", type=str,
-                        help="Channel. Can be either tauTau, muTau, or eTau.")
     parser.add_argument("-y", "--year", type=str, 
                         help="2016, 2017 or 2018")
     parser.add_argument("-j", "--json", type=str,
@@ -38,8 +36,8 @@ def checkmake_dir(path):
 
 def return_executable():
     exec_str = ('#!/usr/bin/bash\n'
-    'usage() { echo "Usage: $0 [-i <input file> ] [-o <outfile>] [-s sample] [-w sum_w] [-y year] [-c channel]" 1>&2; exit 1; }\n'
-    'while getopts "i:o:s:w:y:c:" opt; do\n'
+    'usage() { echo "Usage: $0 [-i <input file> ] [-o <outfile>] [-s sample] [-w sum_w] [-y year]" 1>&2; exit 1; }\n'
+    'while getopts "i:o:s:w:y:" opt; do\n'
     '    case "$opt" in\n'
     '        i) INFILE=$OPTARG\n'
     '            ;;\n'
@@ -51,8 +49,6 @@ def return_executable():
     '            ;;\n'
     '        y) YEAR=$OPTARG\n'
     '            ;;\n'
-    '        c) CHANNEL=$OPTARG\n'
-    '            ;;\n'
     '        *)\n'
     '            echo "Invalid argument $OPTARG";\n'
     '            usage\n'
@@ -63,20 +59,20 @@ def return_executable():
     'EXE="/eos/user/j/jowulff/res_HH/giles_data_proc/CMSSW_10_2_15/bin/slc7_amd64_gcc700/RunLoop"\n'
     'cd $CMSSW_SRC || exit 1\n'
     'cmsenv && cd - || exit 1\n'
-    'echo "running: ${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR -c $CHANNEL"\n'
-    '${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR -c $CHANNEL || rm $OUTFILE\n'
+    'echo "running: ${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR"\n'
+    '${EXE} -i $INFILE -o $OUTFILE --sample $SAMPLE --sum_w $SUM_W -y $YEAR || rm $OUTFILE\n'
     'exit 0\n')
     return exec_str
 
 
-def return_subfile(executable, year, channel, sample):
-    arguments = f"-i $(INFILES) -o $(OUTFILE) -s $(SAMPLE) -w $(SUM_W) -y $(YEAR) -c $(CHANNEL)"
+def return_subfile(executable, year, sample):
+    arguments = f"-i $(INFILES) -o $(OUTFILE) -s $(SAMPLE) -w $(SUM_W) -y $(YEAR)"
     file_str = f"executable={executable}\n\
 \n\
 output                = $(ClusterId).$(ProcId).out\n\
 error                 = $(ClusterId).$(ProcId).err\n\
 log                   = $(ClusterId).$(ProcId).log\n\
-output_destination    = root://eosuser.cern.ch//eos/user/j/jowulff/res_HH/Condor_out/dnn_data_{year}_{channel}/{sample}\n\
+output_destination    = root://eosuser.cern.ch//eos/user/j/jowulff/res_HH/Condor_out/dnn_data_{year}/{sample}\n\
 MY.XRDCP_CREATE_DIR   = True\n\
 \n\
 MY.JobFlavour = \"espresso\"\n\
@@ -104,7 +100,6 @@ def parse_goodfile_txt(goodfile:Path,):
 
 
 def main(submit_base_dir: str, 
-         channel: str,
          year: str,
          sample_json: str,
          broken_files: str=""):
@@ -142,10 +137,7 @@ def main(submit_base_dir: str,
 files for sample ({i+1}/{len(d)})\r", end="")
         # data samples are channel-dependant
         if "Run" in sample:
-            if not sample in data_samples[year][channel]:
-                continue
-            else:
-                print(f"\nUsing Data skims: {sample}\n")
+            continue
         submit_dir = submit_base_dir.rstrip("/")+f"/{sample}"
         if not os.path.exists(submit_dir):
             os.mkdir(submit_dir)
@@ -175,10 +167,9 @@ files for sample ({i+1}/{len(d)})\r", end="")
                     print(f"JOB {file.split('/')[-1]} {submitfile}", file=dfile)
                     print(f'VARS {file.split("/")[-1]} INFILES="{file}" \
 OUTFILE="{file.split("/")[-1]}" SAMPLE="{sample}" SUM_W="{sum_w}" \
-YEAR="{year}" CHANNEL="{channel}"', file=dfile)
+YEAR="{year}"', file=dfile)
             submit_string = return_subfile(executable=afs_shscript,
                                         year=year,
-                                        channel=channel,
                                         sample=sample)
         else:
             print(f"\n {dagfile} already exists.. Not creating new one \n")
@@ -186,7 +177,6 @@ YEAR="{year}" CHANNEL="{channel}"', file=dfile)
         if not os.path.exists(submitfile):
             submit_string = return_subfile(executable=afs_shscript,
                                         year=year,
-                                        channel=channel,
                                         sample=sample)
             with open(submitfile, "x") as subfile:
                 print(submit_string, file=subfile)
@@ -197,7 +187,6 @@ if __name__ == "__main__":
     parser = make_parser()
     args = parser.parse_args()
     main(submit_base_dir=args.submit_base,
-         channel=args.channel,
          year=args.year,
          sample_json=args.json,
          broken_files=args.broken)

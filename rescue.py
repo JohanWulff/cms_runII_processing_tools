@@ -18,7 +18,7 @@ datsets and the names of the subdirs from')
     parser.add_argument("-y", "--year", type=str, help="201{6,7,8}")
     parser.add_argument('-s', '--submit_base_dir', type=str, required=False,
                         help='directory to submit from')
-    parser.add_argument('-b', '--broken_files', type=str, required=False,
+    parser.add_argument('-b', '--broken_files', type=str, required=False, default="",
                         help='.json file containing broken files per sample')
     return parser
 
@@ -41,7 +41,7 @@ def n_rootfiles_in_dir(directory: str):
     """
     returns the number of .root files within a given dir
     """
-    cmd = f'find {directory} -type f -name "*.root" | wc -l'
+    cmd = f'find {directory} -type f -name "output_*.root" | wc -l'
     process = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, encoding='utf-8')
     out, err = process.communicate()
     if err:
@@ -49,6 +49,7 @@ def n_rootfiles_in_dir(directory: str):
         sys.exit(1)
     else:
         return int(out)
+
 
 def clear_submit_dir(submit_dir):
     if not os.path.exists(submit_dir):
@@ -104,16 +105,17 @@ submission directory specified!")
             bfiles = json.load(f)
 
     for sample in samples:
+        #if not os.path.exists(output_base_dir+f"{sample}"):
+            #print(f"SKIM {sample} not present in {output_base_dir}")
+            #continue
         n_root = n_rootfiles_in_dir(directory=output_base_dir+f'/{sample}')
         input_path = samples[sample]['Path']
-        n_das = n_rootfiles_in_dir(directory=input_path)
-        if broken_files != "":
-            n_das = [file for file in n_das if file not in bfiles[sample]]
-        if n_root == n_das:
+        num_files = samples[sample]["N_files"]
+        if n_root == num_files:
             print(f"processing complete for {sample}!\r", end="")
         else:
             print(f"number of files in {output_base_dir}/{sample}: {n_root}")
-            print(f"number of files in {input_path}: {n_das}")
+            print(f"number of files noted in .json {input_path}: {num_files}")
             if resubmit is True:
                 print("Numbers don't match.. Resubmitting")
                 dagfile = f"{submit_base_dir}/{sample}/{sample}.dag"

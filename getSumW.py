@@ -11,10 +11,10 @@ broken_dict = defaultdict(lambda: defaultdict(list))
 
 
 sample_2id = {
-    "radion_ggf": -4,
-    "radion_vbf": -3,
-    "graviton_ggf": -2,
-    "graviton_vbf": -1,
+    "radion_vbf": -4,
+    "radion_ggf": -3,
+    "graviton_vbf": -2,
+    "graviton_ggf": -1,
     "data": 0,
     "DY": 1,
     "TT" : 2,
@@ -94,6 +94,8 @@ def make_parser():
     parser.add_argument("-y", "--year", type=str, help="2016, 2016APV, 17, or 18")
     parser.add_argument("-j", "--json", type=str, required=False, default="",
                         help=".json file to append to. If none, new one will be written.")
+    parser.add_argument("-b", "--broken", type=str, required=False, default="",
+                        help=".txt file containing broken .root files to ignore")
     return parser
 
 
@@ -118,6 +120,13 @@ def parse_goodfile_txt(goodfile:Path,):
         gfiles = sorted([i for i in skims_dir.glob("*.root")])
 
     return gfiles
+
+
+def parse_broken_txt(brokenfile: Path,):
+    with open(brokenfile) as bfile:
+        bfiles = sorted([Path(line.rstrip()) for line in bfile])
+        print(f"ignoring the following files: {bfiles}")
+    return bfiles
 
 
 def read_sumw(gfiles:list,):
@@ -149,10 +158,11 @@ def read_sumw(gfiles:list,):
             broken_dict[sample]["Empty"].append(str(gfile))
         except:
             print("{gfile} seems to be broken")
+            broken_dict[sample]["Empty"].append(str(gfile))
     return sum_w
     
 
-def main(paths: list, year: str, jsonfile:str = ""):
+def main(paths: list, year: str, jsonfile:str = "", brokenfile: str=""):
     global broken_dict
     if jsonfile == "":
         jsonfile = f"./{year}.json"
@@ -160,6 +170,10 @@ def main(paths: list, year: str, jsonfile:str = ""):
     paths = [i for i in paths if os.path.isdir(i)]
     ## remove data samples
     #paths = [i for i in paths if not f"Run{year}" in i]
+    if brokenfile != "":
+        bfiles = parse_broken_txt(brokenfile)
+        print(f"ignoring the following broken files: {bfiles}")
+
     for i, path in enumerate(paths):
         print(f"\nWorking on sample {i+1}/{len(paths)}.\n")
         print(f"\nWorking on sample {path}.\n")
@@ -180,6 +194,8 @@ def main(paths: list, year: str, jsonfile:str = ""):
                 gfiles = parse_goodfile_txt(goodfile) 
             except:
                 print(f"Unable to read {goodfile}")
+        if brokenfile != "":
+            gfiles = [file for file in gfiles if not file in bfiles]
         n_files = len(gfiles) 
         if year in path.name:
             # Data sample
@@ -209,4 +225,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     main(paths= args.paths,
          year= args.year,
-         jsonfile=args.json)
+         jsonfile=args.json,
+         brokenfile=args.broken)
